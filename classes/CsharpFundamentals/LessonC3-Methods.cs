@@ -25,6 +25,24 @@ class Methods
     bool IsEven(short number) => number % 2 == 0;
 
     // 5. Variable number of arguments-->  internal vs public access modifier
-    public double Sum(params double[] numbers) => numbers.Sum();    
+    public double Sum(params double[] numbers) => numbers.Sum(); 
+
+    //6.optional arguments
+
+    public string Greet(string firstName,string lastName,string salutation="Mr.")=> $"Hello ,{salutation},{firstName},{lastName}";
+
+
+    //7. Returing  multiple values using tuples
+
+    public (double,double) CalcSumAndAverage()
+    {
+
+        double av=45.6;
+        double sum=34535.6;
+        return (av,sum);
+
+
+    }
 
 }
+
