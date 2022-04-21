@@ -35,5 +35,25 @@ public class Program
        var div2= calculator2.Divide();
 
 
+    for (long i = 10; i < 20; i++)
+        {
+            Console.WriteLine("Hi");
+        }
+
+        double[] weights = { 34.5, 67.8, 23.5, 34.1 };
+        var t = weights[4];
+
+        for(byte j = 0; j < weights.Length; j++)
+        {
+            Console.WriteLine(weights[j]);
+        }
+
+        foreach(var x in weights)
+        {
+            Console.WriteLine(x);
+        }
+
+
+
     }
 }
