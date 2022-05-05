@@ -33,6 +33,14 @@ namespace LabAssignment
         // int n  =Convert.ToInt32(Console.ReadLine());
         // Console.WriteLine(obj.sum_result(n));
 
+
+        // 6.To calculate avg of 3 decimal arguments
+        // AverageNum avg = new AverageNum();
+        // avg.showresult();
+
+
+
+
         }
     }
 }
