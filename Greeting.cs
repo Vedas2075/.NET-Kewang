@@ -5,6 +5,7 @@
 /*
 public  static void greeting()
 you can't access static members with instance syntax.
+
 */
 
 public  void greeting()

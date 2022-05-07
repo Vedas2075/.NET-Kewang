@@ -2,12 +2,10 @@
 
 using System;
 
-namespace number{
-
-     public class check_num
+       public class check_num
     {
 
-    public static void check_EvenNum()
+    public  void check_EvenNum()
     {
     // string input = Console.ReadLine();
     //  num = Convert.ToInt32(input);
@@ -28,9 +26,9 @@ namespace number{
     Console.WriteLine("Please valid  number. ");
 
     }
-}
+  }
  }
 }
-}
+
     
 
