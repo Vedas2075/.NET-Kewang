@@ -39,6 +39,15 @@ namespace LabAssignment
         // avg.showresult();
 
 
+        // 7.To calculate avg of n arguments
+        // AverageNum_nArgs avg =new AverageNum_nArgs();
+        // avg.showresult();
+
+
+        // 8.To count total males,females & others 
+        GenderCount obj = new GenderCount();
+        obj.count();
+
 
 
         }
