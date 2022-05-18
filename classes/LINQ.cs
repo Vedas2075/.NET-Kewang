@@ -54,6 +54,8 @@ public class Query
     var ordernum_2 =from number in numbers orderby x Select x;
 
 // list num starting with H
+// where n.StartsWith("H")
+var females = people.Where(x => x.Name.toLower().StartsWith("h") && x.Gen=="f");
 
     var startName = from  name in Person 
                     Where name.Name[0]=='H'
