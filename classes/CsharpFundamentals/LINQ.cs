@@ -13,14 +13,14 @@ public class Query
     List <Person> people = new()
     {
 
-        new Person {Name= "Ram",Address="Ktm",Gen="m"};
-        new Person {Name= "Bikram",Address="Ktm",Gen="m"};
-        new Person {Name= "Kumar",Address="lalitpur",Gen="m"};
-        new Person {Name= "Kewang",Address="Gothgaun",Gen="m"};
-        new Person {Name= "Harilaxmi",Address="Itahari",Gen="f"};
-        new Person {Name= "bot",Address="Ktm",Gen="f"};
+        new Person {Name= "Ram",Address="Ktm",Gen="m"},
+        new Person {Name= "Bikram",Address="Ktm",Gen="m"},
+        new Person {Name= "Kumar",Address="lalitpur",Gen="m"},
+        new Person {Name= "Kewang",Address="Gothgaun",Gen="m"},
+        new Person {Name= "Harilaxmi",Address="Itahari",Gen="f"},
+        new Person {Name= "bot",Address="Ktm",Gen="f"}
 
-    }
+    };
     public void Test()
     {
         //List all odd numbers
@@ -61,5 +61,5 @@ var females = people.Where(x => x.Name.toLower().StartsWith("h") && x.Gen=="f");
                     Where name.Name[0]=='H'
                     Select name;
 
-
-
+    }
+}
