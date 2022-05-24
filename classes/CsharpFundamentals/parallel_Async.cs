@@ -3,65 +3,57 @@ using System.Threading;
 using System.Diagnostics;
 
 
+// Parallelism
 public class Parallelism
 {
-    short[] numbers = {23,56,90,64,21};
+    static short[] numbers = { 23, 56, 90, 64, 34, 21, 567, 23, 56, 90, 64, 34, 21, 567, 23, 56, 90, 64, 34, 21, 567 };
 
+    public static void Main1()
+    {
+        
+        // Stopwatch watch = new Stopwatch();
 
+        // watch.Start();
+        // TestSequential();
+        // Console.WriteLine($"Sequential version took: {watch.ElapsedMilliseconds} ms");
+
+        // watch.Restart();
+        // TestParallel();
+        // Console.WriteLine($"Parallel version took: {watch.ElapsedMilliseconds} ms");
+    }
 
     public static void TestSequential()
     {
         foreach (short item in numbers)
         {
-            checkIfPrime(item);
+            CheckIfItsPrime(item);
         }
     }
 
-     public static void Testparallel()
+    public static void TestParallel()
     {
-       Parallel.foreach (short item in numbers)
+        // TPL (Task Parallel Library)
+        Parallel.ForEach(numbers, item =>
         {
-            checkIfPrime(item);
-        }
+            CheckIfItsPrime(item);
+        });
     }
 
-    public static void checkIfPrime(short itemNumber)
+    // Simlating for 1 sec delay
+    public static void CheckIfItsPrime(short itemNumber)
     {
-        Console.WriteLine($"processing for item {itemNumber}");
+        Console.WriteLine($"Processing for item {itemNumber}");
         Thread.Sleep(1000);
-
     }
-
-
-    public static void Main1()
-    {
-        Stopwatch watch = new Stopwatch();
-        watch.Start();
-        Console.WriteLine($"Sequential version took :{watch.ElapsedMilliseconds} ms");
-
-        watch.Restart();
-        TestSequential();
-        Console.WriteLine("Parallel");
-
-    
-
-    }
-
-
 }
 
-
-public class  Asynchronous
+public class Asynchronous
 {
-
-
-
-    private readonly HttpClient_httpClient = new HttpClient();
-
+    private readonly HttpClient _httpClient = new HttpClient();
     public async Task DownloadText()
     {
-        var stringData = await_httpClient.GetStringAsync("url");
+        var stringData = await _httpClient.GetStringAsync("https://raw.githubusercontent.com/shaosh/SQLZoo/master/SQL%20Exercise/Nobel%20Quiz.txt");
         Console.WriteLine(stringData);
-
     }
 }
+

@@ -59,17 +59,39 @@
 // // }
 
 
+//-- parallel and Asynchronous--
+/*
+using System;
+using System.Threading;
+
+class program
+ {
+      public static async Task Main()
+          {   
+      
+            Asynchronous asynchronous = new Asynchronous();
+            await asynchronous.DownloadText(); 
+       }
+
+   }
+
+*/
+
+
+// FOR fILE IO
+
 using System;
 using System.Threading;
 
 class program
    {
-         public static void Main(string[] args)
-       {   
+      public static async Task Main()
+          {   
         //
-        Asynchronous a = new Asynchronous();
-        await Asynchronous.DownloadText();
-
+        FileIO fileIO = new();
+        string path = @"C:\Users\cl_si\OneDrive\Pictures\dotnet_demo1.txt";
+        fileIO.ReadFileFromDisk(path);   
+        fileIO.CreateFileToDisk();    
        }
 
    }
